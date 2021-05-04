@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pepsi Website Landing Page</title>
+	<link rel="stylesheet" type="text/css" href="pepsistyle.css">
+</head>
+<body>
+  <section class="sec">
+  	<header>
+  		<a href="#"><img src="logo1.png" class="logo"></a>
+  		<ul>
+  			<li><a href="#">Home</a></li>
+  			<li><a href="#">Product</a></li>
+  			<li><a href="#">What's New</a></li>
+  			<li><a href="#">NewsLetter</a></li>
+  			<li><a href="#">Contact</a></li>
+  			<li><a href="#">By Anubhav</a></li>
+        </ul>
+  	</header>
+  	<div class="content">
+  		<div class="textbox">
+  			<h2>That's What <br><span>I Like</span></h2>
+  			<p>Pepsi. Diet Pepsi. Pepsi Zero Sugar. The gang’s all here. Compare flavors, get nutritional facts and check out ingredients for all our Pepsi products.</p>
+  			<a href="#">View All Product Here!</a>
+
+  		</div>
+  		<div class="imgbox">
+        <img src="pepsi001.jpeg" class="pepsi">
+      </div>
+
+  	</div>
+    <ul class="thumb">
+      <li><img src="pepsi001.jpeg" onclick="imgSlider('pepsi001.jpeg');ChangeBgColor('#0062be')"></li>
+
+      <li><img src="pepsi002.jpeg" onclick="imgSlider('pepsi002.jpeg');ChangeBgColor('#e60c2c')"></li>
+
+      <li><img src="pepsi003.jpeg" onclick="imgSlider('pepsi003.jpeg');ChangeBgColor('#1e1e1e')"></li>
+    </ul>
+    
+  </section>
+  <script type="text/javascript">
+    function imgSlider (anything) {
+      document.querySelector('.pepsi').src=anything;
+    }
+    function ChangeBgColor(color){
+      const sec = document.querySelector('.sec');
+      sec.style.background = color;
+    }
+  </script>
+</body>
+</html>
